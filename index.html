@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascript_day_six</title>
+</head>
+<body>
+
+    <p id="search"></p>
+
+<script>
+let text = "Please locate where 'locate' occurs!";
+let index = text.search("locate");
+document.getElementById("search").innerHTML = index; 
+</script>
+<p id="matches"></p>
+<script>
+
+    let textsearch = "The rain in SPAIN stays mainly in the plain of vain";
+const myArr = textsearch.match("ain");
+document.getElementById("matches").innerHTML= myArr.length +" "+myArr;
+</script>
+<p id="matchg"></p>
+<script>
+
+    let textmatchg = "The rain in SPAIN stays mainly in the plain of vain";
+const myArrg = textmatchg.match(/ain/g);
+document.getElementById("matchg").innerHTML= myArrg.length +" "+myArrg;
+</script>
+<!-- for case sensitive we can use the /ain/gi
+  the ain is used for the search word -->
+  <p id="matchall"></p>
+
+<script>
+let textmatchall = "I love cats. Cats are very easy to love. Cats are very popular."
+const iterator = text.matchAll("Cats");
+
+document.getElementById("matchall").innerHTML = Array.from(iterator);
+</script>
+<p id="include"></p>
+
+
+<script>
+let textinc = "Hello world, welcome to the universe.";
+document.getElementById("include").innerHTML = textinc.includes("world");
+
+// document.getElementById("include").innerHTML=textinc.startsWith("world");
+// used for startswith is to check the match.
+</script>
+<p id="endswith"></p>
+
+
+<script>
+let textend = "Hello world, welcome to the universe.";
+document.getElementById("endswith").innerHTML = textend.endsWith("world");
+</script>
+
+
+    <script src="index.js"></script>
+</body>
+</html>
